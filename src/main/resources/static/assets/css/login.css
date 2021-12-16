@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.borda{
+    background-image: url("../img/BannerLogin.png");
+    background-size: cover;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.input{
+    width: 293px;
+    height: 13px;
+    border-color: #ced4da73;
+    padding: 10px;
+    border-radius:5px;
+}
+
+.input::placeholder{
+    font-family: 'Roboto', sans-serif;
+}
+
+.sideOps{
+    width: 317px;
+}
+
+button{
+
+    width: 192px;
+    height: 33px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.btn-secondy{
+    background-color: white !important;
+    color: black !important;
+}
+
+.logo{
+    width: 275px;
+    height: 300.66px;
+}
+
+.fundo{
+    width: 321px;
+}
+
+.fundoaviso{
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 321px;
+    height: 61px;
+    color: black;
+}
+
+@media only screen and (max-width: 850px) {
+    #imglateral{
+        display: none;
+    }
+    #login{
+        width: 100vw !important;
+    }
+}
