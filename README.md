@@ -1,2 +1,1 @@
-# BlueStore-Backend
 # Artis-backend
