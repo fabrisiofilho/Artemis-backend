@@ -54,4 +54,9 @@ public class UsuarioServiceImpl implements UsuarioService{
         return usuarioRepository.findById(id).orElseThrow();
     }
 
+    @Override
+    public UsuarioEntity consultarPeloEmail(String email) {
+        return usuarioRepository.findByEmail(email).orElseThrow();
+    }
+
 }

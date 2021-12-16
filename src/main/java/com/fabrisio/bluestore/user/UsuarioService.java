@@ -13,5 +13,6 @@ public interface UsuarioService {
     List<UsuarioEntity> listar();
     UsuarioEntity consultar(UUID id);
     UsuarioEntity alterarSenha(UUID id, ResetPasswordDto model);
+    UsuarioEntity consultarPeloEmail(String email);
 
 }

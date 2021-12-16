@@ -1,8 +1,10 @@
 package com.fabrisio.bluestore.security.resetpassword;
 
+import com.fabrisio.bluestore.security.forgotpassword.ForgotPasswordDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class ResetPasswordController {
@@ -15,7 +17,7 @@ public class ResetPasswordController {
     }
 
     @PostMapping(RESET_PASSWORD)
-    public String resetpost(){
+    public String resetpost(@RequestBody ResetPasswordDto dto){
         return "sucesso";
     }
 

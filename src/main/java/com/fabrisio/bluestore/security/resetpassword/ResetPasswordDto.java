@@ -1,8 +1,12 @@
 package com.fabrisio.bluestore.security.resetpassword;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class ResetPasswordDto {
 
     private String senha;
