@@ -14,9 +14,6 @@ import java.util.Set;
 public class ForgotPasswordServiceImpl implements ForgotPasswordService{
 
     @Autowired
-    private SendMailService sendMailService;
-
-    @Autowired
     private UsuarioService usuarioService;
 
     @Autowired
@@ -43,7 +40,7 @@ public class ForgotPasswordServiceImpl implements ForgotPasswordService{
         Set<String> listDestinatarios = new HashSet<>();
         listDestinatarios.add(user.getEmail());
         StringBuilder body = new StringBuilder("Olá" + user.getUsuario());
-        sendMailService.enviar(SendMailService.Mensagem.builder().assunto("Redefinição de senha da sua conta ArtisCo").corpo(body.toString()).destinatarios(listDestinatarios).build());
+        ///sendMailService.enviar(SendMailService.Mensagem.builder().assunto("Redefinição de senha da sua conta ArtisCo").corpo(body.toString()).destinatarios(listDestinatarios).build());
     }
 
 }

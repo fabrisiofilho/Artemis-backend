@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class ForgotPasswordController {
@@ -20,12 +19,12 @@ public class ForgotPasswordController {
     }
 
     @PostMapping(FORGOT_PASSWORD)
-    public String forgotpost(@RequestBody ForgotPasswordDto dto) throws Exception {
+    public String forgotpost(ForgotPasswordDto dto) throws Exception {
         try {
             forgotPasswordService.forgotPasswordProcess(dto);
-            return "pages/forgotPassword?success";
+            return "redirect:/forgotPassword?success";
         }catch (Exception e){
-            return "pages/forgotPassword?error";
+            return "redirect:/forgotPassword?error";
         }
     }
 
